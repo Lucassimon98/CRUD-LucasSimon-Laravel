@@ -19,3 +19,6 @@ Route::get('/', function () {
 Route::get('/cadastro', function () {
     return view('cadastro');
 });
+Route::get('/entrar', function () {
+    return view('entrar');
+});
