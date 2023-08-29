@@ -37,4 +37,16 @@ class UsuarioController extends Controller
             return redirect()->route('entrar');
         }
     }
+
+    public function sessaoAuth(Request $request) {
+        $data = Usuario::all()
+        ->where('email', '=', $request->input('email'))
+        ->where('senha', '=', $request->input('senha'))
+        ->count();
+        
+        if($data > 0)
+        {
+            return false;
+        }
+    }
 }

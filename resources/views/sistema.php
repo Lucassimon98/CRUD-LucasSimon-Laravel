@@ -1,3 +1,3 @@
 <?php
-    echo "Logado no sistema até fechar a sessão. Só entra com a sessão iniciada"
+    echo "Logado no sistema. Estou em busca de implementar autenticação em Laravel"
 ?>
