@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/cadastro', function () {
-    return view('cadastro');
-});
-Route::get('/entrar', function () {
-    return view('entrar');
+Route::get('/', [UsuarioController::class, 'index'])->name('index');
+Route::get('/create', [UsuarioController::class, 'create'])->name('create');
+Route::post('/', [UsuarioController::class, 'store'])->name('store');
+
+Route::fallback(function() {
+    return "Erro ao localizar a página";
 });

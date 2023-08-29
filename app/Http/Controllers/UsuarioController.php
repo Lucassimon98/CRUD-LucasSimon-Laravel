@@ -8,11 +8,12 @@ use App\Models\Usuario;
 class UsuarioController extends Controller
 {
     public function index() {
-        return view('index');
+        $usuarios = Usuario::all();
+        return view('index', ['usuarios'=>$usuarios]);
     }
 
     public function create() {
-        return view('cadastro')
+        return view('cadastro');
     }
 
     public function store(Request $request) {
