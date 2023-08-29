@@ -1,0 +1,12 @@
+body {
+    overflow-x: hidden;
+}
+
+.background-inicio{
+    background-color: #ccc;
+    height: 100%;
+}
+
+.font-bold {
+    font-weight: bold;
+}
