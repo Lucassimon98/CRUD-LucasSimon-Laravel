@@ -6,10 +6,11 @@
 
 @section('content')
 <div class="background-inicio d-flex flex-column align-items-center justify-content-center">
-    <form action="" class="d-flex flex-column align-items-center bg-light w-50 p-5 rounded">
+    <form action="{{ route('store') }}" method="POST" class="d-flex flex-column align-items-center bg-light w-50 p-5 rounded">
+    @csrf
         <div class="inputBox d-flex w-30 flex-column mb-3">
             <label for="nome" class="labelInput font-bold">Nome Completo</label>
-            <input type="text" nome="nome" id="nome" class="inputUser" required>
+            <input type="text" name="nome" id="nome" class="inputUser" required>
         </div>
         <div class="inputBox d-flex w-30 flex-column mb-3">
             <label for="email" class="labelInput font-bold">Email</label>
@@ -20,7 +21,7 @@
             <input type="text" name="senha" id="senha" class="inputUser" required>
         </div>
         <div class="inputBox d-flex w-25 flex-column">
-            <a href="#" class="btn btn-success">Cadastrar</a>
+            <input type="submit" name="submit" class="btn btn-success" value="Cadastrar">
         </div>
     </form>
 </div>

@@ -15,7 +15,8 @@ use App\Http\Controllers\UsuarioController;
 */
 
 Route::get('/', [UsuarioController::class, 'index'])->name('index');
-Route::get('/create', [UsuarioController::class, 'create'])->name('create');
+Route::get('/entrar', [UsuarioController::class, 'entrar'])->name('entrar');
+Route::get('/cadastro', [UsuarioController::class, 'create'])->name('cadastro');
 Route::post('/', [UsuarioController::class, 'store'])->name('store');
 
 Route::fallback(function() {

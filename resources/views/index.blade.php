@@ -12,10 +12,10 @@
     </div>
     <div class="row">
         <div class="col-md-6 text-end">
-            <a href="./entrar" class="btn btn-primary">Entrar</a>
+            <a href="{{ route('entrar')}}" class="btn btn-primary">Entrar</a>
         </div>
         <div class="col-md-6 text-start">
-            <a href="./cadastro" class="btn btn-primary">Cadastre-se</a>
+            <a href="{{ route('cadastro')}}" class="btn btn-primary">Cadastre-se</a>
         </div>
     </div>
 </div>
